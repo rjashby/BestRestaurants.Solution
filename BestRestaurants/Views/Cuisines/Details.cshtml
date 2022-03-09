@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BestRestaurants.Models.Restaurant
+
+<h2>Cuisine Types</h2>
+<hr />
+<h3>Cuisine Type: @Html.DisplayFor(model => model.Cuisine)<h3>
+<p>@Html.ActionLink("Edit Cuisine Type", "Edit", new { id = Model.CuisineId })</p>

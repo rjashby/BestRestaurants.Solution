@@ -7,3 +7,10 @@ div#footer {
   background:#333;
   padding:8px;
 }
+
+body {
+  padding: 20px;
+  border: 20px;
+  margin: 20px;
+  background-color: lightcoral;
+}

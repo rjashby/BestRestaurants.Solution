@@ -65,6 +65,11 @@ namespace BestRestaurants.Controllers
     {
       var thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
       _db.Cuisines.Remove(thisCuisine);
+      // This foreach would remove the restaurant when you delete the cuisine
+      // foreach(Restaurant restaurant in thisCuisine.Restaurants)
+      // {
+      //   _db.Restaurants.Remove(restaurant);
+      // }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

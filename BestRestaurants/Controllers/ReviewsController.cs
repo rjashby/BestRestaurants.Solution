@@ -26,9 +26,8 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Create(int id)
     {
-      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name");
-      // ViewBag.RestaurantId = id;
-      // Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      // ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name");
+      ViewBag.RestaurantId = id;
       return View();
     }
 

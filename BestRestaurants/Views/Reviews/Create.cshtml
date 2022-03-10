@@ -9,13 +9,13 @@
 @using (Html.BeginForm())
 
 { 
-  //@Html.HiddenFor(@ViewBag.RestaurantId)
+  @Html.Hidden("RestaurantId", $"{ViewBag.RestaurantId}")
   @Html.LabelFor(model => model.Title)
   @Html.TextBoxFor(model => model.Title)
   @Html.LabelFor(model => model.Text)
   @Html.TextAreaFor(model => model.Text)
-  @Html.LabelFor(model => model.Restaurant)
-  @Html.DropDownList("RestaurantId")
+  //@Html.LabelFor(model => model.Restaurant)
+  //@Html.DropDownList("RestaurantId")
 
   <input type="submit" value="Add new review" class="btn btn-default" />
 }

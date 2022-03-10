@@ -41,6 +41,8 @@ namespace BestRestaurants.Controllers
     public ActionResult Details(int id)
     {
       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      List<Review> model = _db.Reviews.Where(restaurant => restaurant.RestaurantId == id).ToList();
+      thisRestaurant.Reviews = model;
       return View(thisRestaurant);
     }
 

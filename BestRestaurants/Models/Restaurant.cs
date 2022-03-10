@@ -6,7 +6,6 @@ namespace BestRestaurants.Models
   {
     public int RestaurantId { get; set; }
     public int CuisineId { get; set; }
-    public int ReviewId { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string Phone { get; set; }

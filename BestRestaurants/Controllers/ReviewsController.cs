@@ -26,8 +26,10 @@ namespace BestRestaurants.Controllers
 
     public ActionResult Create(int id)
     {
-      int model = id;
-      return View(model);
+      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name");
+      // ViewBag.RestaurantId = id;
+      // Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      return View();
     }
 
     [HttpPost]
@@ -35,7 +37,7 @@ namespace BestRestaurants.Controllers
     {
       _db.Reviews.Add(review);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Restaurants");
     }
 
     // public ActionResult Details(int id)

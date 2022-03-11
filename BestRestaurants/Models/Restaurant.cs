@@ -10,11 +10,11 @@ namespace BestRestaurants.Models
     public string Address { get; set; }
     public string Phone { get; set; }
     public virtual Cuisine Cuisine { get; set; }
-    public virtual List<Review> Reviews { get; set; }
+    public virtual ICollection<Review> Reviews { get; set; }
     
-    // public Restaurant()
-    // {
-    //   this.Reviews = new HashSet<Review>();
-    // }
+    public Restaurant()
+    {
+      this.Reviews = new HashSet<Review>();
+    }
   }
 }
